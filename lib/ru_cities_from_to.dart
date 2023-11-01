@@ -4,7 +4,7 @@ class RuCities {
   RuCities._();
 
   // согласные
-  static const consonants = [
+  static const _consonants = [
     'б',
     'в',
     'г',
@@ -28,6 +28,9 @@ class RuCities {
     'щ'
   ];
 
+  /// Откуда.
+  /// 
+  /// Например, "из Уфы"
   static String from(String city) {
     // Исключения:
     if (city == 'Комсомольск-на-Амуре') {
@@ -85,7 +88,7 @@ class RuCities {
 
     // Все города, оканчивающиеся на согласную: Ангарск, Мышкин, Углич, Мурманск, Псков
     // Мурманск - Мурманска
-    if (consonants.contains(lastLetter)) {
+    if (_consonants.contains(lastLetter)) {
       return '$cityа';
     }
 
@@ -118,6 +121,9 @@ class RuCities {
     return city;
   }
 
+  /// Куда.
+  /// 
+  /// Например, "в Уфу"
   static String to(String city) {
     final lastLetter = city[city.length - 1];
     final root = city.substring(0, city.length - 1);
