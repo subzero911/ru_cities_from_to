@@ -15,9 +15,10 @@ void main() {
     expect(RuCities.from('Гусь-Хрустальный'), 'Гусь-Хрустального');
     expect(RuCities.from('Кемерово'), 'Кемерова');
     expect(RuCities.from('Орехово-Зуево'), 'Орехово-Зуева');
+    expect(RuCities.from('Минводы'), 'Минвод');
   });
 
-    test('Cities to', () {
+  test('Cities to', () {
     expect(RuCities.to('Ковров'), 'Ковров');
     expect(RuCities.to('Торжок'), 'Торжок');
     expect(RuCities.to('Тверь'), 'Тверь');

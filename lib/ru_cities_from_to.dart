@@ -1,6 +1,8 @@
 library ru_cities_from_to;
 
 class RuCities {
+  RuCities._();
+
   // согласные
   static const consonants = [
     'б',
@@ -30,6 +32,32 @@ class RuCities {
     final lastLetter = city[city.length - 1];
     final lastTwoLetters = city.substring(city.length - 2, city.length);
     final root = city.substring(0, city.length - 1); // название без последней буквы
+
+    // Исключения:
+    if (city == 'Комсомольск-на-Амуре') {
+      return 'Комсомольска-на-Амуре';
+    }
+    if (city == 'Ростов-на-Дону') {
+      return 'Ростова-на-Дону';
+    }
+    if (city == 'Великий Новгород') {
+      return 'Великого Новгорода';
+    }
+    if (city == 'Нижний Новгород') {
+      return 'Нижнего Новгорода';
+    }
+    if (city == 'Минеральные воды') {
+      return 'Минеральных вод';
+    }
+    if (city == 'Люберцы') {
+      return 'Люберец';
+    }
+    if (city == 'Апатиты') {
+      return 'Апатитов';
+    }
+    if (city == 'Сланцы') {
+      return 'Сланцев';
+    }
 
     // Сначала проверяем последние 2 буквы
 
@@ -79,28 +107,19 @@ class RuCities {
     // Кемерово - Кемерова
     if (lastLetter == 'о') {
       return '$rootа';
+    }
+    
+    // Чебоксары - Чебоксар
+    if (lastLetter == 'ы') {
+      return root;
     }    
-
-    // Исключения:
-    if (city == 'Комсомольск-на-Амуре') {
-      return 'Комсомольска-на-Амуре';
-    }
-    if (city == 'Ростов-на-Дону') {
-      return 'Ростова-на-Дону';
-    }
-    if (city == 'Великий Новгород') {
-      return 'Великого Новгорода';
-    }
-    if (city == 'Нижний Новгород') {
-      return 'Нижнего Новгорода';
-    }
 
     // Тольятти, Сочи - не изменяются
     return city;
   }
 
   static String to(String city) {
-    final lastLetter = city[city.length - 1];    
+    final lastLetter = city[city.length - 1];
     final root = city.substring(0, city.length - 1);
 
     // Москва - Москву
@@ -111,7 +130,7 @@ class RuCities {
     // Шуя - Шую
     if (lastLetter == 'я') {
       return '$rootю';
-    }        
+    }
 
     return city;
   }
