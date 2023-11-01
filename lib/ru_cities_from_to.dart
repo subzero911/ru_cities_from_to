@@ -77,7 +77,7 @@ class RuCities {
     }
 
     // Кемерово - Кемерова
-    if (lastLetter == 'o') {
+    if (lastLetter == 'о') {
       return '$rootа';
     }    
 

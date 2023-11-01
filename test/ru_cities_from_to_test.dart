@@ -13,6 +13,7 @@ void main() {
     expect(RuCities.from('Бологое'), 'Бологого');
     expect(RuCities.from('Сочи'), 'Сочи');
     expect(RuCities.from('Гусь-Хрустальный'), 'Гусь-Хрустального');
+    expect(RuCities.from('Кемерово'), 'Кемерова');
     expect(RuCities.from('Орехово-Зуево'), 'Орехово-Зуева');
   });
 
