@@ -1,6 +1,6 @@
 name: ru_cities_from_to
 description: Small utility lib which helps you to create a train/bus schedule for Russian cities, with correct city name endings.
-version: 1.0.2
+version: 1.0.3
 repository: https://github.com/subzero911/ru_cities_from_to
 
 environment:
