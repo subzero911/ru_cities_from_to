@@ -29,10 +29,6 @@ class RuCities {
   ];
 
   static String from(String city) {
-    final lastLetter = city[city.length - 1];
-    final lastTwoLetters = city.substring(city.length - 2, city.length);
-    final root = city.substring(0, city.length - 1); // название без последней буквы
-
     // Исключения:
     if (city == 'Комсомольск-на-Амуре') {
       return 'Комсомольска-на-Амуре';
@@ -58,6 +54,10 @@ class RuCities {
     if (city == 'Сланцы') {
       return 'Сланцев';
     }
+
+    final lastLetter = city[city.length - 1];
+    final lastTwoLetters = city.substring(city.length - 2, city.length);
+    final root = city.substring(0, city.length - 1); // название без последней буквы
 
     // Сначала проверяем последние 2 буквы
 
